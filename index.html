@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Screenshake.io</title>
+	<style type="text/css">
+		body {
+		  background: #ffdd00;
+		  color: #FF0600;
+		  font-family: 'Press Start 2P', sans-serif;
+		  line-height: 1.5;
+		  font-size: 1.1rem;
+		}
+
+		.main {
+		  margin: 2em;
+		  max-width: 50%;
+		}
+
+		a {
+		  text-decoration: none;
+		  color: #C70500;
+		  font-weight: bolder;
+		}
+
+		a:hover {
+		  padding-bottom: 4px;
+		  border-bottom: dashed #C70500 4px;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onmousedown = window.ontouchdown = function() {
+		  document.body.style.transform = "translate("+Math.floor(Math.random()*30-15)+"px, "+Math.floor(Math.random()*30-15)+"px)"
+		  window.setTimeout(function() {
+		    document.body.style.transform = "";
+		    console.log(document.body);
+		  },30);
+		}
+	</script>
+</head>
+<body>
+	<div class="main">
+		<h3>Hi</h3>
+		<p>My name is <a href="https://twitter.com/grifdail">grifdail</a>, <a href="https://grifdail.itch.io/">I make game</a> and I really love screenshake</p>
+		<p>You're probably looking for <a href="http://www.vlambeer.com/">Vlambeer</a>'s talk <a href="https://www.youtube.com/watch?v=AJdEqssNZ-U">"The art of screenshake"</a> or the one by <a href="http://grapefrukt.com/">grapefrukt</a> called <a href="https://www.youtube.com/watch?v=Fy0aCDmgnxg">"Juice it or Loose it"</a></p>
+		<p>You may also be interested in the <a href="http://screenshake.be/">belgian indie conference</a> called screenshake.</p>
+	</div>
+</body>
+</html>
